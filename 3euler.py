@@ -31,12 +31,10 @@ def gen_primes():
 def largest_prime_factor(n, prime=2):
     primes = gen_primes()
     for pr in primes:
-        if (pr < prime):
-            continue
+        # if (pr < prime):
+        #     continue
         if (n == 1):
             return prime
-        if (prime > n):
-            break
         if (n % pr == 0):
             new_n = n // pr
             return largest_prime_factor(new_n, pr)
