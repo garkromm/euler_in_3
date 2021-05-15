@@ -11,6 +11,9 @@ import unittest
 # https://en.wikipedia.org/wiki/Euler_summation
 # sum = n(n+1)/2
 
+# https://public.oed.com/how-to-use-the-oed/abbreviations/
+# Analyt.	analytic
+
 
 def max_div_n(n, below):
     return (below - 1) // n
@@ -20,7 +23,7 @@ def euler_sum(n):
     return n*(n+1)/2
 
 
-def sum_mul_3_5_anal(below):
+def sum_mul_3_5_analyt(below):
     max_div_3, max_div_5, max_div_15 = max_div_n(
         3, below), max_div_n(5, below), max_div_n(15, below)
     final_sum = 3*euler_sum(max_div_3) + 5 * \
@@ -37,15 +40,15 @@ class Tests(unittest.TestCase):
     def test_sum(self):
         self.assertEqual(sum_mul_3_5(10), 23, "Should be 23")
 
-    def test_sum_anal(self):
-        self.assertEqual(sum_mul_3_5_anal(10), 23, "Should be 23")
+    def test_sum_analyt(self):
+        self.assertEqual(sum_mul_3_5_analyt(10), 23, "Should be 23")
 
     def test_euler_sum(self):
         self.assertAlmostEqual(euler_sum(100), sum(range(1, 101)))
 
 
 def main():
-    print(sum_mul_3_5_anal(1000))
+    print(sum_mul_3_5_analyt(1000))
 
 
 if __name__ == '__main__':
