@@ -11,10 +11,6 @@ import unittest
 # find the sum of the even-valued terms.
 
 
-# https://en.wikipedia.org/wiki/Euler_summation
-# sum = n(n+1)/2
-
-
 def fibonacci(n):
     1
 
