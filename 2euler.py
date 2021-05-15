@@ -8,7 +8,7 @@
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million,
 # find the sum of the even-valued terms.
 
-# TODO find something more analytical
+# TODO find something more analytical (every 3th term is even)
 
 def fib_even_sum_below_term(below_term):
     prev, curr = 0, 1
