@@ -7,11 +7,12 @@ import math
 
 # What is the largest prime factor of the number 600851475143 ?
 
-
 # Testing algorith in python before haskell
 
 # stolen from http://code.activestate.com/recipes/117119/
 # https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+
+
 def gen_primes():
     D = {}
     q = 2
@@ -31,8 +32,6 @@ def gen_primes():
 def largest_prime_factor(n, prime=2):
     primes = gen_primes()
     for pr in primes:
-        # if (pr < prime):
-        #     continue
         if (n == 1):
             return prime
         if (n % pr == 0):
