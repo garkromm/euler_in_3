@@ -8,4 +8,4 @@
 - [x] 6 Python
 - [x] 7 C
 - [x] 8 Haskell
-- [ ] 9 C
+- [x] 9 C
