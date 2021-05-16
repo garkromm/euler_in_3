@@ -6,6 +6,6 @@
 - [x] 4 Haskell
 - [x] 5 C
 - [x] 6 Python
-- [ ] 7 C
+- [x] 7 C
 - [x] 8 Haskell
 - [ ] 9 C
