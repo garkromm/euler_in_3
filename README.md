@@ -7,5 +7,5 @@
 - [ ] 5 C
 - [ ] 6 Python
 - [ ] 7 C
-- [ ] 8 Haskell
+- [x] 8 Haskell
 - [ ] 9 C
