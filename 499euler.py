@@ -29,14 +29,14 @@ def prob_loss(m, s):
     while (count < 1000):
         prob_loss.append(games_till_loss_calc(m, s))
         count += 1
-    return sum(prob_loss)/len(prob_loss)
+    return 1 - sum(prob_loss)/len(prob_loss)
 
 
 def games_till_loss_calc(m, s):
     count = 0
     bankroll = 1
     loss = 0
-    while(s <= 100000*m):
+    while(s <= 1000*m):
         if s < m:
             loss = 1
             break
@@ -53,7 +53,7 @@ def games_till_loss_calc(m, s):
 
 
 def main():
-    print(prob_loss(2, 5))
+    print(prob_loss(2, 2))
 
 
 if __name__ == '__main__':
