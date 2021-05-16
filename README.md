@@ -2,7 +2,7 @@
 
 - [x] 1 Python
 - [x] 2 Python
-- [ ] 3 Haskell
+- [x] 3 Haskell
 - [x] 4 Haskell
 - [x] 5 C
 - [x] 6 Python
