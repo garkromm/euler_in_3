@@ -19,6 +19,7 @@ void main()
 int special_pyt_tripplet(int sum)
 {
     int a, b, c;
+    // a < b < c
     for (a = 1; a < sum / 3; a++)
     {
         for (b = 2; b < sum / 2; b++)
