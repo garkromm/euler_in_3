@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from math import log2, floor
 import random
 from decimal import Decimal
 
@@ -26,34 +27,34 @@ def prob_loss(m, s):
         return 0
     prob_loss = []
     count = 1
-    while (count < 1000):
+    while (count < 10):
         prob_loss.append(games_till_loss_calc(m, s))
         count += 1
-    return 1 - sum(prob_loss)/len(prob_loss)
+    return Decimal(sum(prob_loss))/Decimal(len(prob_loss))
 
 
 def games_till_loss_calc(m, s):
-    count = 0
+    count = 1
     bankroll = 1
-    loss = 0
-    while(s <= 1000*m):
-        if s < m:
-            loss = 1
-            break
-        if random.random() < 0.5:
+    win = 0
+    casinoMaxGames = floor(log2(s))
+    while(count <= casinoMaxGames):
+        if random.random() > 0.5:
             bankroll *= 2
-            print('H')
+            # print('H')
         else:
-            s = s - m + bankroll
+            s += bankroll - m
             bankroll = 1
-            print('T')
-        count += 1
+            # print('T')
         print(f'bankroll {bankroll}, stack {s}, count {count}')
-    return loss
+
+        count += 1
+
+    return win
 
 
 def main():
-    print(prob_loss(2, 2))
+    print(prob_loss(15, 1e+9))
 
 
 if __name__ == '__main__':
