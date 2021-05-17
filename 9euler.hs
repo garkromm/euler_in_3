@@ -8,6 +8,6 @@
 sumN = 1000
 
 specialPytTripplet :: Int -> Int
-specialPytTripplet n = head [a*b*(sumN-a-b) | a <- [1..(sumN `div` 3)], b <- [2..(sumN `div` 2)], a*a + b*b == (sumN-a-b)*(sumN-a-b)]
+specialPytTripplet n = head [a*b*(sumN-a-b) | a <- [1..(sumN `div` 3)], b <- [2..(sumN `div` 2)], a^2 + b^2 == (sumN-a-b)^2]
 
 main = print $ specialPytTripplet sumN
