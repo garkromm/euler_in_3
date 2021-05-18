@@ -37,7 +37,7 @@ void main()
     long long product = 1;
     long long greatest_product = 1;
 
-    while (i < 987)
+    while (i < 1000)
     {
         digit = char_int(strNumber[i]);
         if (digit == 0)
@@ -64,6 +64,7 @@ void main()
         {
             greatest_product = product;
         }
+
         i++;
     }
 
