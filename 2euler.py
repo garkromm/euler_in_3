@@ -19,7 +19,7 @@ def fib_even_sum_below_term(below_term):
         prev, curr = curr, prev + curr
         if curr > below_term:
             break
-        if (curr % 2 == 0):
+        if curr % 2 == 0:
             even_sum += curr
     return even_sum
 
