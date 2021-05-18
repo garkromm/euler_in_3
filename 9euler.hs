@@ -4,7 +4,7 @@
 -- For example, 32 + 42 = 9 + 16 = 25 = 52.
 -- There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 -- Find the product abc.
--- u^2 + uv = 500 // u(u+v) = 500
+-- u^2 + uv = 500 // u(u+v) = 500 // for v > 0 ==> u > 23 because u > sqrt(500)
 -- TODO find bounds
 
 sumN = 1000
