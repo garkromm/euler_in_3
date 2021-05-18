@@ -9,8 +9,6 @@ int char_int(char c);
 
 void main()
 {
-    long long product = 1;
-    long long greatest_product = 1;
     char strNumber[] = "73167176531330624919225119674426574742355349194934"
                        "96983520312774506326239578318016984801869478851843"
                        "85861560789112949495459501737958331952853208805511"
@@ -32,18 +30,43 @@ void main()
                        "05886116467109405077541002256983155200055935729725"
                        "71636269561882670428252483600823257530420752963450";
 
-    for (int i = 0; i <= 1000 - 13; i++)
+    int digit;
+    int i = 0;
+    int divider_product = 1;
+    int counter13 = 1;
+    long long product = 1;
+    long long greatest_product = 1;
+
+    while (i < 987)
     {
-        product = 1;
-        for (int j = i; j < i + 13; j++)
+        digit = char_int(strNumber[i]);
+        if (digit == 0)
         {
-            product *= char_int(strNumber[j]);
+            counter13 = 1;
+            product = 1;
+            i++;
+            continue;
         }
+        else if (counter13 <= 13)
+        {
+            product *= digit;
+            counter13++;
+            i++;
+            continue;
+        }
+        else
+        {
+            divider_product = char_int(strNumber[i - 13]);
+            product = (product / divider_product) * digit;
+        }
+
         if (product > greatest_product)
         {
             greatest_product = product;
         }
+        i++;
     }
+
     printf("%llu\n", greatest_product);
 }
 
